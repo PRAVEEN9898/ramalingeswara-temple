@@ -42,60 +42,6 @@
                         </button>
                     </div>
                 </div>
-
-                <!-- NEW: Manual donor add form for admin -->
-                <div class="donation-admin-form">
-                    <h3>Manual Donor Entry (Cash / Online)</h3>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="text" id="adminDonorName" placeholder="Donor Name *">
-                        </div>
-                        <div class="form-group">
-                            <input type="number" id="adminDonorAmount" placeholder="Amount (₹) *" min="1">
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="date" id="adminDonorDate">
-                        </div>
-                        <div class="form-group">
-                            <select id="adminDonationType">
-                                <option value="money" selected>Money Donation</option>
-                                <option value="item">Item Donation</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <select id="adminPaymentMethod">
-                                <option value="Cash" selected>Cash</option>
-                                <option value="UPI">UPI</option>
-                                <option value="Bank Transfer">Bank Transfer</option>
-                                <option value="Card">Card</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <input type="text" id="adminAmountOrItem" placeholder="Amount / Item Name *">
-                        </div>
-                        <div class="form-group">
-                            <!-- Transaction ID can be empty (null) for cash -->
-                            <input type="text" id="adminTransactionId" placeholder="Transaction ID / UTR (optional)">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <input type="text" id="adminNotes" placeholder="Notes (committee member / details, optional)">
-                    </div>
-
-                    <button type="button" class="cta-button" onclick="adminAddDonor()">
-                        Add Donor Manually
-                    </button>
-                </div>
-                <!-- END manual donor form -->
-
                 <div class="table-container">
                     <table class="donors-table">
                         <thead>
@@ -109,7 +55,7 @@
                             </tr>
                         </thead>
                         <tbody id="donorsTableBody">
-                            <!-- Loaded by JS (existing + newly added donors) -->
+                            <!-- Loaded by JS -->
                         </tbody>
                     </table>
                 </div>
