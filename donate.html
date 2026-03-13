@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - Sri Ramalingeswara Swamy Temple</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-temple"></i>
+                <span>Sri Ramalingeswara Swamy</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="history.html" class="nav-link">History</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="donate.html" class="nav-link active">Donate</a></li>
+                <li><a href="admin.html" class="nav-link">Admin</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section class="donate-hero">
+        <div class="container">
+            <h1><i class="fas fa-hands-helping"></i> Donate for Temple Reconstruction</h1>
+            <p>Your contribution preserves 400 years of divine heritage</p>
+        </div>
+    </section>
+
+    <section class="bank-details">
+        <div class="container">
+            <h2>Bank Details</h2>
+            <div class="bank-grid">
+                <div class="bank-item">
+                    <label>Account Name:</label>
+                    <div class="bank-value">Sri Ramalingeswara Swamy Temple Trust</div>
+                    <button class="copy-btn" onclick="copyText('Sri Ramalingeswara Swamy Temple Trust')"><i class="fas fa-copy"></i></button>
+                </div>
+                <div class="bank-item">
+                    <label>Account Number:</label>
+                    <div class="bank-value">123456789012</div>
+                    <button class="copy-btn" onclick="copyText('123456789012')"><i class="fas fa-copy"></i></button>
+                </div>
+                <div class="bank-item">
+                    <label>IFSC Code:</label>
+                    <div class="bank-value">SBIN0001234</div>
+                    <button class="copy-btn" onclick="copyText('SBIN0001234')"><i class="fas fa-copy"></i></button>
+                </div>
+                <div class="bank-item">
+                    <label>Branch:</label>
+                    <div class="bank-value">Chebrolu Branch, Guntur</div>
+                    <button class="copy-btn" onclick="copyText('Chebrolu Branch, Guntur')"><i class="fas fa-copy"></i></button>
+                </div>
+                <div class="bank-item">
+                    <label>UPI ID:</label>
+                    <div class="bank-value">ramalingeswara.temple@paytm</div>
+                    <button class="copy-btn" onclick="copyText('ramalingeswara.temple@paytm')"><i class="fas fa-copy"></i></button>
+                </div>
+            </div>
+            <div class="upi-qr">
+                <img src="images/upi-qr.jpg" alt="UPI QR Code">
+                <p>Scan to donate via UPI</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="donation-form-section">
+        <div class="container">
+            <h2>Donation Form</h2>
+            <form id="donationForm" class="donation-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="donorName" placeholder="Full Name *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="donorPhone" placeholder="Phone Number *" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <select id="donationType" required>
+                        <option value="">Select Donation Type</option>
+                        <option value="money">Money Donation</option>
+                        <option value="item">Item Donation</option>
+                    </select>
+                </div>
+                <div id="moneyField" class="form-group hidden">
+                    <input type="number" id="donationAmount" placeholder="Amount (₹) *" min="10">
+                </div>
+                <div id="itemField" class="form-group hidden">
+                    <input type="text" id="itemName" placeholder="Item Name *">
+                </div>
+                <div class="form-group">
+                    <input type="text" id="transactionId" placeholder="Transaction ID / UTR">
+                </div>
+                <div class="form-group">
+                    <input type="file" id="paymentProof" accept="image/*">
+                    <small>Upload payment screenshot (optional)</small>
+                </div>
+                <div class="form-group">
+                    <textarea id="donorMessage" placeholder="Message (optional)"></textarea>
+                </div>
+                <button type="submit" class="cta-button large">Submit Donation</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer"><!-- footer content same as before --></footer>
+
+    <script src="js/donate.js"></script>
+    <script>
+        function copyText(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Copied to clipboard!');
+            });
+        }
+    </script>
+</body>
+</html>
