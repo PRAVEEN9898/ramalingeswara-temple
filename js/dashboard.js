@@ -119,12 +119,61 @@ loadEvents();
 };
 
 // Export donors to CSV
+// exportBtn.addEventListener('click', function() {
+// const donors = JSON.parse(localStorage.getItem('templeDonors')) || [];
+// if (donors.length === 0) {
+// alert('No donors to export');
+// return;
+// }
+  // Export donors to CSV (fixed for Excel & ₹)
 exportBtn.addEventListener('click', function() {
-const donors = JSON.parse(localStorage.getItem('templeDonors')) || [];
-if (donors.length === 0) {
-alert('No donors to export');
-return;
-}
+    const donors = JSON.parse(localStorage.getItem('templeDonors')) || [];
+    if (donors.length === 0) {
+        alert('No donors to export');
+        return;
+    }
+
+    // Header row
+    let csv = 'Name,Type,Amount/Item,Phone,Transaction ID,Date\r\n';
+
+    donors.forEach(donor => {
+        // Do NOT put ₹ in the data; keep it plain number/string
+        const amountOrItem = donor.type === 'money'
+            ? donor.amount
+            : (donor.item || '');
+
+        const row = [
+            donor.name || '',
+            donor.type || '',
+            amountOrItem || '',
+            donor.phone || '',
+            donor.transactionId || '',
+            new Date(donor.date).toLocaleDateString('en-IN')
+        ];
+
+        // Escape double quotes and wrap each field
+        const escaped = row.map(v =>
+            `"${String(v).replace(/"/g, '""')}"`
+        );
+
+        csv += escaped.join(',') + '\r\n';
+    });
+
+    // Add UTF‑8 BOM so Excel reads encoding correctly
+    const blob = new Blob(
+        ['\uFEFF' + csv],
+        { type: 'text/csv;charset=utf-8;' }
+    );
+
+    const url = window.URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download =
+        'temple-donors-' + new Date().toISOString().split('T')[0] + '.csv';
+    a.click();
+    window.URL.revokeObjectURL(url);
+});
+
 
 let csv = 'Name,Type,Amount/Item,Phone,Transaction ID,Date\\n';
 donors.forEach(donor => {
