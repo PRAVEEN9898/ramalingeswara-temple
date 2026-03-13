@@ -1,1 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple History - Sri Ramalingeswara Swamy Temple</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation (same as index) -->
+    <nav class="navbar">
+        <!-- Same navbar code as index.html -->
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-temple"></i>
+                <span>Sri Ramalingeswara Swamy</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="history.html" class="nav-link active">History</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="donate.html" class="nav-link">Donate</a></li>
+                <li><a href="admin.html" class="nav-link">Admin</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
 
+    <section class="history-hero">
+        <div class="container">
+            <h1><i class="fas fa-history"></i> Temple History</h1>
+            <p>400+ Years of Divine Legacy</p>
+        </div>
+    </section>
+
+    <section class="history-content">
+        <div class="container">
+            <div class="history-text">
+                <h2>The Sacred Origins</h2>
+                <p>Nestled in the serene village of Selapadu, Sri Ramalingeswara Swamy Temple was established around 1600 AD by local devotees who experienced divine visions of Lord Shiva. The temple's Lingam is believed to be self-manifested (Swayambhu), making it a powerful spiritual center.</p>
+                <p>Over centuries, the temple has served as the cultural and religious hub of Chebrolu Mandal, hosting major festivals and attracting devotees from across Andhra Pradesh.</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item" data-year="1600">
+                    <div class="timeline-icon">
+                        <i class="fas fa-temple"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>1600 AD - Construction</h3>
+                        <p>Temple founded with Swayambhu Lingam installation</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="1800">
+                    <div class="timeline-icon">
+                        <i class="fas fa-hammer"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>1800 AD - Renovation</h3>
+                        <p>Major structural renovations during Vijayanagara era</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-year="2026">
+                    <div class="timeline-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>2026 - Reconstruction</h3>
+                        <p>Current comprehensive reconstruction project</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="architecture-section">
+                <h2>Temple Architecture</h2>
+                <div class="architecture-grid">
+                    <div class="arch-item">
+                        <img src="images/arch1.jpg" alt="Gopuram">
+                        <h3>Dravidian Gopuram</h3>
+                        <p>Five-tiered tower entrance with intricate carvings</p>
+                    </div>
+                    <div class="arch-item">
+                        <img src="images/arch2.jpg" alt="Mandapam">
+                        <h3>Carved Mandapam</h3>
+                        <p>Pillars depicting Shiva's 108 names</p>
+                    </div>
+                    <div class="arch-item">
+                        <img src="images/arch3.jpg" alt="Shiva Lingam">
+                        <h3>Swayambhu Lingam</h3>
+                        <p>Self-manifested idol in sanctum sanctorum</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Same footer as index.html -->
+    <footer class="footer">
+        <!-- Footer content same as index.html -->
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sri Ramalingeswara Swamy Temple</h3>
+                    <p>Selapadu Village, Chebrolu Mandal<br>Guntur District, Andhra Pradesh<br>India - 522213</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> +91 12345 67890<br>
+                       <i class="fas fa-envelope"></i> temple@ramalingeswara.org</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Location</h4>
+                    <div class="map-placeholder">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.614228013228!2d80.212345!3d16.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDA3JzI5LjMiTiA4MMKwMTInNDguNSJF!5e0!3m2!1sen!2sin!4v1690000000000" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sri Ramalingeswara Swamy Temple. All rights reserved. Har Har Mahadev!</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
