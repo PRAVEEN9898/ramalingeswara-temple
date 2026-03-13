@@ -5,15 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sri Ramalingeswara Swamy Temple - Selapadu</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <i class="bx bx-home-temple"></i>
-                <span>Sri Ramalingeswara</span>
+                <i class="fas fa-temple"></i>
+                <span>Sri Ramalingeswara Swamy</span>
             </div>
             <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link active">Home</a></li>
@@ -34,68 +33,81 @@
     <section class="hero">
         <div class="hero-slider">
             <div class="slide active">
-                <img src="images/hero1.jpg" alt="Temple View 1" class="hero-img">
+                <img src="images/temple1.jpg" alt="Temple View 1" data-index="0">
+                <div class="slide-overlay"></div>
             </div>
             <div class="slide">
-                <img src="images/hero2.jpg" alt="Temple View 2" class="hero-img">
+                <img src="images/temple2.jpg" alt="Temple View 2" data-index="1">
+                <div class="slide-overlay"></div>
             </div>
             <div class="slide">
-                <img src="images/hero3.jpg" alt="Temple View 3" class="hero-img">
-            </div>
-            <!-- Add 7 more slides -->
-            <div class="slide">
-                <img src="images/hero4.jpg" alt="Temple View 4" class="hero-img">
+                <img src="images/temple3.jpg" alt="Temple View 3" data-index="2">
+                <div class="slide-overlay"></div>
             </div>
             <div class="slide">
-                <img src="images/hero5.jpg" alt="Temple View 5" class="hero-img">
+                <img src="images/temple4.jpg" alt="Temple View 4" data-index="3">
+                <div class="slide-overlay"></div>
             </div>
             <div class="slide">
-                <img src="images/hero6.jpg" alt="Temple View 6" class="hero-img">
+                <img src="images/temple5.jpg" alt="Temple View 5" data-index="4">
+                <div class="slide-overlay"></div>
             </div>
             <div class="slide">
-                <img src="images/hero7.jpg" alt="Temple View 7" class="hero-img">
+                <img src="images/temple6.jpg" alt="Temple View 6" data-index="5">
+                <div class="slide-overlay"></div>
             </div>
             <div class="slide">
-                <img src="images/hero8.jpg" alt="Temple View 8" class="hero-img">
+                <img src="images/temple7.jpg" alt="Temple View 7" data-index="6">
+                <div class="slide-overlay"></div>
             </div>
             <div class="slide">
-                <img src="images/hero9.jpg" alt="Temple View 9" class="hero-img">
+                <img src="images/temple8.jpg" alt="Temple View 8" data-index="7">
+                <div class="slide-overlay"></div>
             </div>
             <div class="slide">
-                <img src="images/hero10.jpg" alt="Temple View 10" class="hero-img">
+                <img src="images/temple9.jpg" alt="Temple View 9" data-index="8">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="slide">
+                <img src="images/temple10.jpg" alt="Temple View 10" data-index="9">
+                <div class="slide-overlay"></div>
             </div>
             <div class="slider-nav">
-                <button class="prev"><i class="bx bx-chevron-left"></i></button>
-                <button class="next"><i class="bx bx-chevron-right"></i></button>
+                <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
             </div>
+            <div class="slider-dots"></div>
         </div>
         <div class="hero-content">
             <h1 class="hero-title">Sri Ramalingeswara Swamy Temple</h1>
-            <p class="hero-desc">400+ years of divine blessings. Dedicated to Lord Shiva & Goddess Parvati. Currently under reconstruction.</p>
-            <a href="donate.html" class="cta-btn">Donate Now <i class="bx bx-donate-heart"></i></a>
+            <p class="hero-subtitle">Selapadu Village, Chebrolu Mandal, Guntur District</p>
+            <p class="hero-description">A 400+ year old divine abode of Lord Shiva & Goddess Parvati</p>
+            <a href="donate.html" class="cta-button">Donate Now <i class="fas fa-heart"></i></a>
         </div>
     </section>
 
     <!-- Temple Introduction -->
-    <section class="intro">
+    <section class="temple-intro">
         <div class="container">
-            <h2 class="section-title">Temple Introduction</h2>
+            <h2><i class="fas fa-temple"></i> Temple Introduction</h2>
             <div class="intro-content">
                 <div class="intro-text">
-                    <p>For over 400 years, Sri Ramalingeswara Swamy Temple has been the spiritual heart of Selapadu village. Dedicated to Lord Shiva and Goddess Parvati, this sacred site has witnessed generations of devotion, prayers answered, and countless blessings bestowed upon devotees.</p>
-                    <p>The temple is currently undergoing magnificent reconstruction to restore its ancient glory while incorporating modern facilities for devotees.</p>
+                    <p>For over 400 years, Sri Ramalingeswara Swamy Temple has been the spiritual heart of Selapadu village. Dedicated to Lord Shiva and Goddess Parvati, this sacred site has witnessed generations of devotion, festivals, and divine blessings.</p>
+                    <p>Currently under reconstruction, the temple is being restored to its former glory while preserving its ancient architectural heritage. Your generous donations will help complete this sacred project.</p>
                 </div>
-                <img src="images/devotees.jpg" alt="Devotees" class="intro-img">
+                <div class="intro-image">
+                    <img src="images/temple-intro.jpg" alt="Temple Introduction">
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Festival Announcements -->
-    <section class="events">
+    <section class="festivals" id="events">
         <div class="container">
-            <h2 class="section-title">Festival Announcements</h2>
-            <div id="events-list" class="events-grid">
-                <!-- Events populated by JS -->
+            <h2><i class="fas fa-calendar-alt"></i> Festival Announcements</h2>
+            <div class="events-grid" id="eventsList">
+                <!-- Events loaded by JS -->
             </div>
         </div>
     </section>
@@ -103,39 +115,65 @@
     <!-- Gallery Preview -->
     <section class="gallery-preview">
         <div class="container">
-            <h2 class="section-title">Temple Gallery</h2>
+            <h2><i class="fas fa-images"></i> Temple Gallery</h2>
             <div class="gallery-grid">
-                <img src="images/gallery1.jpg" alt="Temple 1">
-                <img src="images/gallery2.jpg" alt="Temple 2">
-                <img src="images/gallery3.jpg" alt="Temple 3">
-                <img src="images/construction1.jpg" alt="Construction 1">
-                <img src="images/festival1.jpg" alt="Festival 1">
-                <img src="images/gallery4.jpg" alt="Temple 4">
+                <div class="gallery-item">
+                    <img src="images/gallery1.jpg" alt="Temple Gallery 1">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery2.jpg" alt="Temple Gallery 2">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery3.jpg" alt="Temple Gallery 3">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery4.jpg" alt="Temple Gallery 4">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery5.jpg" alt="Temple Gallery 5">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="images/gallery6.jpg" alt="Temple Gallery 6">
+                    <div class="overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
             </div>
-            <a href="gallery.html" class="cta-btn secondary">View Full Gallery</a>
+            <div class="gallery-cta">
+                <a href="gallery.html" class="cta-button secondary">View Full Gallery</a>
+            </div>
         </div>
     </section>
 
     <!-- Donation CTA -->
     <section class="donation-cta">
         <div class="container">
-            <h2>Help Rebuild Our Temple</h2>
-            <p>Your generous donation will help restore this 400-year-old sacred site for future generations.</p>
-            <a href="donate.html" class="cta-btn large">Donate Now <i class="bx bx-donate-heart"></i></a>
+            <div class="cta-content">
+                <h2><i class="fas fa-hands-helping"></i> Support Temple Reconstruction</h2>
+                <p>Your donation will help restore our 400-year-old heritage temple</p>
+                <a href="donate.html" class="cta-button large">Donate Now <i class="fas fa-rupee-sign"></i></a>
+            </div>
         </div>
     </section>
 
-    <!-- Comments Section -->
+    <!-- Devotee Comments -->
     <section class="comments">
         <div class="container">
-            <h2 class="section-title">Devotee Comments</h2>
-            <div id="comments-list" class="comments-grid">
-                <!-- Comments populated by JS -->
+            <h2><i class="fas fa-comments"></i> Devotee Comments</h2>
+            <div class="comments-list" id="commentsList">
+                <!-- Comments loaded by JS -->
             </div>
-            <form id="comment-form" class="comment-form">
-                <input type="text" id="comment-name" placeholder="Your Name" required>
-                <textarea id="comment-message" placeholder="Share your experience..." required></textarea>
-                <button type="submit" class="cta-btn">Submit Comment</button>
+            <form class="comment-form" id="commentForm">
+                <div class="form-group">
+                    <input type="text" id="commentName" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="commentMessage" placeholder="Share your experience..." required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Submit Comment</button>
             </form>
         </div>
     </section>
@@ -150,16 +188,13 @@
                 </div>
                 <div class="footer-section">
                     <h4>Contact</h4>
-                    <p><i class="bx bx-phone"></i> +91 98765 43210</p>
-                    <p><i class="bx bx-envelope"></i> temple@ramalingeswara.org</p>
+                    <p><i class="fas fa-phone"></i> +91 12345 67890<br>
+                       <i class="fas fa-envelope"></i> temple@ramalingeswara.org</p>
                 </div>
                 <div class="footer-section">
                     <h4>Location</h4>
-                    <div class="map-container">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3818.456789123456!2d80.123456!3d16.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDA3JzI5LjIiTiA4MMKwMDcnMjguNSJF!5e0!3m2!1sen!2sin!4v1630000000000" 
-                            width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy">
-                        </iframe>
+                    <div class="map-placeholder">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3808.614228013228!2d80.212345!3d16.123456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDA3JzI5LjMiTiA4MMKwMTInNDguNSJF!5e0!3m2!1sen!2sin!4v1690000000000" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>
@@ -172,6 +207,21 @@
     <script src="js/slider.js"></script>
     <script src="js/comments.js"></script>
     <script src="js/events.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+        
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
