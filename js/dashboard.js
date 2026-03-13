@@ -125,7 +125,7 @@ loadEvents();
 // alert('No donors to export');
 // return;
 // }
-  // Export donors to CSV (fixed for Excel & ₹)
+ // Export donors to CSV (fixed for Excel & ₹)
 exportBtn.addEventListener('click', function() {
     const donors = JSON.parse(localStorage.getItem('templeDonors')) || [];
     if (donors.length === 0) {
@@ -174,20 +174,6 @@ exportBtn.addEventListener('click', function() {
     window.URL.revokeObjectURL(url);
 });
 
-
-let csv = 'Name,Type,Amount/Item,Phone,Transaction ID,Date\\n';
-donors.forEach(donor => {
-csv += `"${donor.name}","${donor.type}","${donor.type === 'money' ? '₹' + donor.amount : donor.item}","${donor.phone}","${donor.transactionId || ''}","${new Date(donor.date).toLocaleDateString('en-IN')}"\\n`;
-});
-
-const blob = new Blob([csv], { type: 'text/csv' });
-const url = window.URL.createObjectURL(blob);
-const a = document.createElement('a');
-a.href = url;
-a.download = 'temple-donors-' + new Date().toISOString().split('T')[0] + '.csv';
-a.click();
-window.URL.revokeObjectURL(url);
-});
 
 // Event modal
 addEventBtn.addEventListener('click', function() {
