@@ -3,90 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard - Sri Ramalingeswara Swamy Temple</title>
+    <title>Admin Login - Sri Ramalingeswara Swamy Temple</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
+<body class="admin-login-body">
+    <div class="admin-login-container">
+        <div class="admin-login-card">
+            <div class="login-header">
                 <i class="fas fa-shield-alt"></i>
-                <span>Temple Admin</span>
+                <h2>Admin Login</h2>
+                <p>Sri Ramalingeswara Swamy Temple</p>
             </div>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="donate.html" class="nav-link">Donate</a></li>
-                <li><a href="dashboard.html" class="nav-link active">Admin</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <section class="admin-donations-section">
-        <div class="container">
-            <h2>Manual Donor Entry</h2>
-
-            <div class="donation-admin-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="text" id="adminDonorName" placeholder="Donor Name *">
-                    </div>
-                    <div class="form-group">
-                        <input type="number" id="adminDonorAmount" placeholder="Amount (₹) *" min="1">
-                    </div>
-                </div>
-
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="date" id="adminDonorDate">
-                    </div>
-                    <div class="form-group">
-                        <select id="adminPaymentMethod">
-                            <option value="Cash" selected>Cash</option>
-                            <option value="UPI">UPI</option>
-                            <option value="Bank Transfer">Bank Transfer</option>
-                            <option value="Card">Card</option>
-                            <option value="Other">Other</option>
-                        </select>
-                    </div>
-                </div>
-
+            <form id="adminLoginForm" class="login-form">
                 <div class="form-group">
-                    <input type="text" id="adminTransactionId"
-                           placeholder="Transaction ID / UTR (optional)">
+                    <label>User ID</label>
+                    <input type="text" id="adminUserId" placeholder="Enter User ID" required>
                 </div>
-
                 <div class="form-group">
-                    <input type="text" id="adminNotes"
-                           placeholder="Notes (committee member / details, optional)">
+                    <label>Password</label>
+                    <input type="password" id="adminPassword" placeholder="Enter Password" required>
                 </div>
-
-                <button type="button" class="cta-button" onclick="adminAddDonor()">
-                    Add Donor Manually
+                <button type="submit" class="login-btn">
+                    <i class="fas fa-sign-in-alt"></i> Login
                 </button>
+            </form>
+            <div class="login-footer">
+                <p>User ID: RAMALINGESARA_TEMPLE@ADMIN</p>
+                <p>Password: HARAHARAMAHADEV@123</p>
             </div>
-
-            <hr>
-
-            <h2>Donations List</h2>
-            <table id="adminDonationsTable" class="donations-table" border="1">
-                <thead>
-                    <tr>
-                        <th>Donor Name</th>
-                        <th>Amount (₹)</th>
-                        <th>Date</th>
-                        <th>Payment Method</th>
-                        <th>Transaction ID</th>
-                        <th>Notes</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- rows added by JS -->
-                </tbody>
-            </table>
         </div>
-    </section>
+    </div>
 
-    <script src="js/dashboard.js"></script>
+    <script src="js/admin.js"></script>
 </body>
 </html>
