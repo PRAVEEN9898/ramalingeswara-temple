@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Sri Ramalingeswara Swamy Temple</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="admin-dashboard-body">
+    <nav class="admin-nav">
+        <div class="nav-brand">
+            <i class="fas fa-temple"></i>
+            <span>Admin Dashboard</span>
+        </div>
+        <button id="logoutBtn" class="logout-btn">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+    </nav>
+
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <ul class="sidebar-menu">
+                <li><a href="#donors" class="active"><i class="fas fa-users"></i> Donors</a></li>
+                <li><a href="#comments"><i class="fas fa-comments"></i> Comments</a></li>
+                <li><a href="#events"><i class="fas fa-calendar-alt"></i> Events</a></li>
+                <li><a href="#slider"><i class="fas fa-images"></i> Slider Images</a></li>
+            </ul>
+        </aside>
+
+        <main class="dashboard-main">
+            <!-- Donors Section -->
+            <section id="donors" class="dashboard-section active">
+                <div class="section-header">
+                    <h2><i class="fas fa-users"></i> Donor List</h2>
+                    <div class="section-actions">
+                        <button id="exportDonors" class="action-btn primary">
+                            <i class="fas fa-download"></i> Export Excel
+                        </button>
+                        <button id="refreshDonors" class="action-btn">
+                            <i class="fas fa-sync"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table class="donors-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Amount/Item</th>
+                                <th>Date</th>
+                                <th>Transaction ID</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="donorsTableBody">
+                            <!-- Loaded by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Comments Section -->
+            <section id="comments" class="dashboard-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-comments"></i> Comments</h2>
+                </div>
+                <div class="table-container">
+                    <table class="comments-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Message</th>
+                                <th>Date</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="commentsTableBody">
+                            <!-- Loaded by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Events Section -->
+            <section id="events" class="dashboard-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-calendar-alt"></i> Temple Events</h2>
+                    <div class="section-actions">
+                        <button id="addEventBtn" class="action-btn primary">
+                            <i class="fas fa-plus"></i> Add Event
+                        </button>
+                    </div>
+                </div>
+                <div class="table-container">
+                    <table class="events-table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Date</th>
+                                <th>Description</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="eventsTableBody">
+                            <!-- Loaded by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Slider Section -->
+            <section id="slider" class="dashboard-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-images"></i> Homepage Slider</h2>
+                </div>
+                <div class="slider-manager">
+                    <p>Slider images are managed automatically from /images folder</p>
+                    <p>Current images: temple1.jpg to temple10.jpg</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Add Event Modal -->
+    <div id="eventModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Add New Event</h3>
+                <span class="close">&times;</span>
+            </div>
+            <form id="eventForm">
+                <div class="form-group">
+                    <input type="text" id="eventTitle" placeholder="Event Title" required>
+                </div>
+                <div class="form-group">
+                    <input type="date" id="eventDate" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="eventDesc" placeholder="Event Description" required></textarea>
+                </div>
+                <button type="submit" class="cta-button">Add Event</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
