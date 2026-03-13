@@ -176,7 +176,70 @@ document.addEventListener('DOMContentLoaded', function() {
         
         alert('Event added successfully!');
     });
-    
+    // -------- Manual Donor Add for Admin (cash or online) --------
+function adminAddDonor() {
+    const nameInput = document.getElementById('adminDonorName');
+    const amountInput = document.getElementById('adminDonorAmount');   // not strictly needed, you can ignore
+    const dateInput = document.getElementById('adminDonorDate');
+    const donationTypeSelect = document.getElementById('adminDonationType'); // money / item
+    const paymentMethodSelect = document.getElementById('adminPaymentMethod'); // Cash / UPI / ...
+    const amountOrItemInput = document.getElementById('adminAmountOrItem');
+    const txnInput = document.getElementById('adminTransactionId');
+    const notesInput = document.getElementById('adminNotes');
+
+    const name = nameInput.value.trim();
+    const donationType = donationTypeSelect.value; // 'money' or 'item'
+    const paymentMethod = paymentMethodSelect.value;
+    const amountOrItem = amountOrItemInput.value.trim();
+    const date = dateInput.value || new Date().toISOString(); // if empty, use today
+    let transactionId = txnInput.value.trim();
+    const notes = notesInput.value.trim();
+
+    if (!name || !amountOrItem) {
+        alert('Please enter Donor Name and Amount / Item.');
+        return;
+    }
+
+    // For cash, force transactionId to be empty (null conceptually)
+    if (paymentMethod === 'Cash') {
+        transactionId = '';
+    }
+
+    // Build donor object matching existing structure in localStorage
+    const newDonor = {
+        name: name,
+        type: donationType,                           // 'money' or 'item'
+        amount: donationType === 'money' ? amountOrItem : '', // number/text
+        item: donationType === 'item' ? amountOrItem : '',
+        phone: '',                                    // admin is adding; phone unknown
+        transactionId: transactionId,                 // '' for cash
+        date: date,
+        paymentMethod: paymentMethod,
+        notes: notes
+    };
+
+    const donors = JSON.parse(localStorage.getItem('templeDonors')) || [];
+    donors.unshift(newDonor); // add to top
+    localStorage.setItem('templeDonors', JSON.stringify(donors));
+
+    // Refresh table using your existing function
+    if (typeof loadDonors === 'function') {
+        loadDonors();
+    }
+
+    // Clear form
+    nameInput.value = '';
+    amountInput.value = '';
+    dateInput.value = '';
+    donationTypeSelect.value = 'money';
+    paymentMethodSelect.value = 'Cash';
+    amountOrItemInput.value = '';
+    txnInput.value = '';
+    notesInput.value = '';
+
+    alert('Donor added successfully!');
+}
+
     // Refresh button
     refreshBtn.addEventListener('click', loadDonors);
     
