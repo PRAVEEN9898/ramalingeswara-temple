@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Sri Ramalingeswara Swamy Temple</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation (same structure) -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-temple"></i>
+                <span>Sri Ramalingeswara Swamy</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="history.html" class="nav-link">History</a></li>
+                <li><a href="gallery.html" class="nav-link active">Gallery</a></li>
+                <li><a href="donate.html" class="nav-link">Donate</a></li>
+                <li><a href="admin.html" class="nav-link">Admin</a></li>
+            </ul>
+            <div class="hamburger"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <section class="gallery-hero">
+        <div class="container">
+            <h1><i class="fas fa-images"></i> Temple Gallery</h1>
+            <p>Capturing the divine beauty and devotion</p>
+        </div>
+    </section>
+
+    <div class="gallery-container">
+        <section class="gallery-section">
+            <div class="container">
+                <h2>Temple Photos</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="images/temple1.jpg" alt="Temple 1"><div class="overlay"><i class="fas fa-expand"></i></div></div>
+                    <div class="gallery-item"><img src="images/temple2.jpg" alt="Temple 2"><div class="overlay"><i class="fas fa-expand"></i></div></div>
+                    <div class="gallery-item"><img src="images/temple3.jpg" alt="Temple 3"><div class="overlay"><i class="fas fa-expand"></i></div></div>
+                    <div class="gallery-item"><img src="images/temple4.jpg" alt="Temple 4"><div class="overlay"><i class="fas fa-expand"></i></div></div>
+                    <div class="gallery-item"><img src="images/temple5.jpg" alt="Temple 5"><div class="overlay"><i class="fas fa-expand"></i></div></div>
+                    <div class="gallery-item"><img src="images/temple6.jpg" alt="Temple 6"><div class="overlay"><i class="fas fa-expand"></i></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="container">
+                <h2>Construction Photos</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="images/construction1.jpg" alt="Construction 1"><div class="overlay"><i class="fas fa-expand"></i></div></div>
+                    <div class="gallery-item"><img src="images/construction2.jpg" alt="Construction 2"><div class="overlay"><i class="fas fa-expand"></i></div></div>
+                    <div class="gallery-item"><img src="images/construction3.jpg" alt="Construction 3"><div class="overlay"><i class="fas fa-expand"></i></div></div>
+                    <div class="gallery-item"><img src="images/construction4.jpg" alt="Construction 4"><div class="overlay"><i class="fas fa-expand"></i></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery-section">
+            <div class="container">
+                <h2>Festival Photos</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item"><img src="images/festival1.jpg" alt="Festival 1"><div class="overlay"><i class="fas fa-expand"></i></div></div>
+                    <div class="gallery-item"><img src="images/festival2.jpg" alt="Festival 2"><div class="overlay"><i class="fas fa-expand"></i></div></div>
+                    <div class="gallery-item"><img src="images/festival3.jpg" alt="Festival 3"><div class="overlay"><i class="fas fa-expand"></i></div></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="videos-section">
+            <div class="container">
+                <h2>Festival Videos</h2>
+                <div class="video-grid">
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Mahashivaratri Celebration" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <div class="video-item">
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Temple Construction Update" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer same as index.html -->
+    <footer class="footer"><!-- footer content --></footer>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
 
